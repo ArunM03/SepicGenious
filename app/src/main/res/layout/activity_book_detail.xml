@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".BookDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/bold"
+                android:text="Book Name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tv_writer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="Author Name"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/book_image"
+                app:riv_corner_radius="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/regular"
+                android:text="Description"
+                android:textColor="@color/text_gray_2"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/tv_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/regular"
+                android:justificationMode="inter_word"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:targetApi="o" />
+
+
+            <Button
+                android:id="@+id/btn_readbook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/gradient_btn"
+                android:fontFamily="@font/bold"
+                android:onClick="onReadBook"
+                android:text="Read This Book"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:textSize="22sp" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btn_buybook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/gradient_btn"
+                android:fontFamily="@font/bold"
+                android:onClick="onBuyBook"
+                android:text="Buy This Book"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/regular"
+                android:text="Edition"
+                android:textColor="@color/text_gray_2"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/tv_Edition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/regular"
+                android:justificationMode="inter_word"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:targetApi="o" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/regular"
+                android:text="Publisher"
+                android:textColor="@color/text_gray_2"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/tv_publisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/regular"
+                android:justificationMode="inter_word"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:targetApi="o" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/regular"
+                android:text="Price"
+                android:textColor="@color/text_gray_2"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/regular"
+                android:justificationMode="inter_word"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:targetApi="o" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

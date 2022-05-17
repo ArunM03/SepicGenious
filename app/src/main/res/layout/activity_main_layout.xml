@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bottom_nav"
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:onClick="onHomeClick"
+            android:src="@drawable/home"
+            android:tint="@color/text_gray_2" />
+
+        <ImageView
+            android:id="@+id/iv_sync"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:onClick="onSyncClick"
+            android:src="@drawable/arrows"
+            android:tint="@color/text_gray_2" />
+
+        <ImageView
+            android:id="@+id/iv_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:onClick="onFavoriteClick"
+            android:src="@drawable/fav"
+            android:tint="@color/text_gray_2" />
+
+        <ImageView
+            android:id="@+id/iv_noti"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:onClick="onNotificationClick"
+            android:src="@drawable/notification"
+            android:tint="@color/text_gray_2" />
+
+
+        <ImageView
+            android:id="@+id/iv_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:onClick="onCartClick"
+            android:src="@drawable/cart"
+            android:tint="@color/text_gray_2" />
+
+        <ImageView
+            android:id="@+id/iv_private"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:onClick="onPrivateBooks"
+            android:src="@drawable/lock"
+            android:tint="@color/text_gray_2" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

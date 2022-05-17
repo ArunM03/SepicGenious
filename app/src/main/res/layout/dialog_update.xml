@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="@dimen/cardview_default_elevation">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+
+
+                <TextView
+                    android:id="@+id/txtMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Downloading Book"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+
+                <TextView
+                    android:id="@+id/txtUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="0%"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:padding="10dp"
+                    android:progress="0" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/gradient_btn"
+                    android:fontFamily="@font/bold"
+                    android:minWidth="150dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Click here to download"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+
+
+
+            </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/iv_close"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dialog_close"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
